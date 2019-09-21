@@ -10,6 +10,6 @@ from compost and add more water and tweak it based on measured constants to simu
 a real system)
 
 
-Example linked diagram to help you.
-![POTS system](../../images/class_example_diagram.png)
+### Class Diagram of POTS System
+![POTS system](../../images/POTS System Class Diagram.png)
 more decription
