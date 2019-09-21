@@ -11,5 +11,5 @@ a real system)
 
 
 ### Class Diagram of POTS System
-![POTS system](../../images/POTS System Class Diagram.png)
+![POTS system](../../images/POTS%20System%20Class%20Diagram.png)
 more decription
