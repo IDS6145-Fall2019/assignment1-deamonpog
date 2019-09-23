@@ -5,7 +5,7 @@ from pathnode import pathnode
 
 Timelimit = 1
 People = [ person() for i in range(10) ]
-PathNodes = [ pathnode(random.random(),random.random(),random.random()) for i in range(10) ]
+PathNodes = [ pathnode(random.random(),random.random(),random.random(),2) for i in range(10) ]
 
 def Simulate():
 	timestep = 0
