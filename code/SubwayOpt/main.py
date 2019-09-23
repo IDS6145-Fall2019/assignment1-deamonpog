@@ -2,9 +2,12 @@ import time
 import random
 from person import person
 from pathnode import pathnode
+from goal import goal
+from train import train
 
 Timelimit = 1
-People = [ person() for i in range(10) ]
+Trians = [ train("Train-" + str(i),random.randint(1,10)) for i in range(10) ]
+People = [ person(goal(True, None)) for i in range(10) ]
 PathNodes = [ pathnode(random.random(),random.random(),random.random(),2) for i in range(10) ]
 
 def Simulate():

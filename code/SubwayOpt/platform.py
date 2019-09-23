@@ -6,6 +6,7 @@ class platform:
 		self.pathnodes = []
 	
 	def Density(self):
+		print("calculating the average density")
 		td = 0
 		for pn in self.pathnodes:
 			td += pn.Density()

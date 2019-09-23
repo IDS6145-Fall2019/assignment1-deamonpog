@@ -10,4 +10,5 @@ class transportationMedium:
 		self.people = []
 	
 	def Transport(self, p):
+		raise NotImplementedError("Please Implement this method!")
 		report False

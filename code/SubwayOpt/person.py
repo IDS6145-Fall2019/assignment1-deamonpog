@@ -1,12 +1,14 @@
 class person:
 
-	def __init__(self):
-		self.isLate = False
-		self.goal = None
+	def __init__(self,g,l=False):
+		self.isLate = l
+		self.goal = g
 		self.current = None
 		self.position = [0,0,0]
 		self.speed = 3
 		self.stateAction = ''
+		self.behavior = None
+		self.ticksSpent = 0
 		print("I am alive!")
 
 	def PlanNextAction(self):
