@@ -47,8 +47,8 @@ The manager of the tunnel escalater system is allowed to make decisions to contr
 ![An Example: A Picture of Holborn Tube Station Escalator](design/images/800px-Holborn_Tube_Station_Escalator.jpg)
 
 ## (Part 1.1): Requirements (Experimental Design) **(10%)**
-
-(remove: You should start by specifying a set of requirements. I specified a topic a Subway escalator. What exactly does that mean - practice formulating your own set of requirements and an experiment. Define problems cities face and hypothesize how a subway system could help alleviate these issue. This helps you think about your problem communication and system objectives inputs, functions, and outputs - they should be clearly specified.)
+The simulation will be run for a full factoral design of experiment by varying the number of escalators that are actively rotating and allowing walking lanes. Congestion values of the station area will be recorded.
+These data will be statistically analyzed for figuring out which parameters give least amount of congestion.
 
 ## (Part 1.2) Subway (My Problem) Model **(10%)**
 
@@ -64,7 +64,7 @@ The manager of the tunnel escalater system is allowed to make decisions to contr
 This will be an agent based simulation. Person will have two main tasks, going to train from the city and going to city from the train. One of these two will be the goal of the person. His behaviour could be either aggressive (wants to go as quickly as he can) or comfirt biasd (looks for less congested areas whenever he can and prefers slow and easy movement options). 
 The train schedule and the amount of people who come to the station will be the input to the system.
 The simulation will allow to calculate the congestion levels at each location on the station. Thse values will be the main outputs of the system.
-(remove: Describe how you would simulate this - including type of simulation, rough details, inputs, outputs, and how it will help you analyze your experimental hypothesis, or nullify your null hypothesis.)
+These outputs will help in optimizing the system by calibrating the model parameters such as number of active escalaters.
 
 
 ## (Part 1.4) Subway City (My Problem) Model **(10%)**
@@ -76,12 +76,22 @@ You are expected to create the python files - the code should run without errors
 ## (Part 1.5) Specifying the Inputs to a System **(10%)**
 
 (remove the below points once ideas are satisfied)
-* Specify the independent and dependent input variables of your subway esclator model
-* Specify where the data will come from measured subset of real data (empirical) or synthetic data
 * What kind of statistics are important to capture this input data
 * How do you plan to analyze the output of your model?
 * What ways will you visualize your data - charts, and graphs you will create?
 * What clever way will you visualize your output with a useful infographic?
+
+Independent variables: 
+1. Number of rotating escalators
+2. Number of lanes allowed to walk
+
+Dependent variables:
+1. Congestion levels at locations (path nodes)
+2. Number of ticks spent by a person in the station
+
+The values for the independent variables will be defined synthetically as required for running a full factorial experiment.
+A linear model will be used for analyzing the data for correlation between congestions since the independent variables are countable. Linear regression, correlation coefficients will be the statistical tools to use for this analysis.
+Scatter plots of congetion, timeseries of congestion, box plot of congestion will be preferable graphs to analyze the data visually. 
 
 
 
