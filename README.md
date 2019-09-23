@@ -118,7 +118,8 @@ Data Source: https://data.ny.gov/Transportation/Turnstile-Usage-Data-2018/bjcb-y
 
 This data is provided by the data.gov website for public use. The data gives information about how many people entered or exited through the turnstile in 2018, in the New York metropolitan area. The data contains 10<sup>7</sup> rows of data where each row shows the cumulative number of Exits and Entries through the turnstiles at a given date-time at a given line of a given station. This data will provide insight to how many people are coming in and leaving a given station. With it a general rate of entries and exits could be determined for a given time of a weekday. This will be considered when optimizing the congestion control with the model that I am designing. The values directly could be applied to the model as input to see how well it would handle the incoming crowds and how the congestion levels of certain areas in the station are affected.
 
-By analysing the data, I picked the specific station JAMAICA 179 ST and the device SCP:00-00-06 in that station for the data analysis since it has enough data for pre-analysis for the model development. This file is located at : 
+By analysing the data, I picked the specific station JAMAICA 179 ST and the device SCP:00-00-06 in that station for the data analysis since it has enough data for pre-analysis for the model development. This file is located at : https://github.com/IDS6145-Fall2019/assignment1-deamonpog/tree/master/data
+
 The basic statistics of Entries and Exits values are given below:
 
 Median of Entries : 67556.0
