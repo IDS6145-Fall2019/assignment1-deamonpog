@@ -61,7 +61,9 @@ The manager of the tunnel escalater system is allowed to make decisions to contr
 * [**Agent / User case** (if appropriate)](model/agent_usecase_diagram.md) - provides details of (what are you providing details of)
 
 ## (Part 1.3) Subway (My Problem) Simulation **(10%)**
-
+This will be an agent based simulation. Person will have two main tasks, going to train from the city and going to city from the train. One of these two will be the goal of the person. His behaviour could be either aggressive (wants to go as quickly as he can) or comfirt biasd (looks for less congested areas whenever he can and prefers slow and easy movement options). 
+The train schedule and the amount of people who come to the station will be the input to the system.
+The simulation will allow to calculate the congestion levels at each location on the station. Thse values will be the main outputs of the system.
 (remove: Describe how you would simulate this - including type of simulation, rough details, inputs, outputs, and how it will help you analyze your experimental hypothesis, or nullify your null hypothesis.)
 
 
