@@ -1,8 +1,11 @@
 import time
+import random
 from person import person
+from pathnode import pathnode
 
-Timelimit = 5
+Timelimit = 1
 People = [ person() for i in range(10) ]
+PathNodes = [ pathnode(random.random(),random.random(),random.random()) for i in range(10) ]
 
 def Simulate():
 	timestep = 0
