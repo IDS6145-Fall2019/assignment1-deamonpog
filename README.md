@@ -100,6 +100,7 @@ Scatter plots of congetion, timeseries of congestion, box plot of congestion wil
 ## (Part 2.1) **P**ortable **O**rganic **T**rouble-free **S**elf-watering System (**POTS**) Model **(10%)**
 Here [**we provide an overview**](code/POTS_system/README.md) of the **P**ortable **O**rganic **T**rouble-free **S**elf-watering System (**POTS**) Model and provide a source code template for the code found in  [**the following folder**](code/POTS_system/). Please create a **class** diagram of this model (replace the placeholder diagram). (you can use paper and pencil or a digital tool).
 
+[**My description of the POTS system is in here**](code/POTS_system/README.md)
 
 
 # Part 3: Data Analysis
@@ -115,10 +116,13 @@ Find a datasource that looks at part of this model - subway stations locations /
 * Calculate and plot some summary statistics that better describe the data.
 
 Data Source: https://data.ny.gov/Transportation/Turnstile-Usage-Data-2018/bjcb-yee3
+Data Folder in Github: https://github.com/IDS6145-Fall2019/assignment1-deamonpog/tree/master/data/
 
 This data is provided by the data.gov website for public use. The data gives information about how many people entered or exited through the turnstile in 2018, in the New York metropolitan area. The data contains 10<sup>7</sup> rows of data where each row shows the cumulative number of Exits and Entries through the turnstiles at a given date-time at a given line of a given station. This data will provide insight to how many people are coming in and leaving a given station. With it a general rate of entries and exits could be determined for a given time of a weekday. This will be considered when optimizing the congestion control with the model that I am designing. The values directly could be applied to the model as input to see how well it would handle the incoming crowds and how the congestion levels of certain areas in the station are affected.
 
-By analysing the data, I picked the specific station JAMAICA 179 ST and the device SCP:00-00-06 in that station for the data analysis since it has enough data for the model development. This file is located at : https://github.com/IDS6145-Fall2019/assignment1-deamonpog/tree/master/data/sorted.csv
+By analysing the data, I picked the specific station JAMAICA 179 ST and the device SCP:00-00-06 in that station for the data analysis since it has enough data for the model development. 
+
+This file is located at : https://github.com/IDS6145-Fall2019/assignment1-deamonpog/tree/master/data/sorted.csv
 
 The basic statistics of Entries and Exits values are given below:
 
@@ -142,8 +146,20 @@ The plot of raw entries and exits after the trimming is shown below. This clearl
 The data was processed to convert the cumulative values into actual values. This gives the actual number of entries and exits. The following grpah shows the actual number of entries and exits over time. There is a peak value of both entries and exits on the 17th of March 2018 at midnight. This must be due to some special event that occured on that day. All other datapoints seem to show a pattern. Therefore, this datapoint is considered an outlier and was modified to a value of 0 inorder to observe the pattern.
 ![EEDataPickedAll](images/EEDataPickedAll.png)
 
-The following shows the same graph with the outlier peak removed. The pattern of peaks follows the weekdays. This will be further analyzed statistically for finding a general pattern for a weekday.
+The following shows the same graph with the outlier peak removed. The pattern of peaks follows the weekdays. This will be further analyzed statistically for finding a general pattern for a weekday. The mean, median and mode values were calculated and are given below the figure.
 ![EEDataPickedRemovedOutlier](images/EEDataPickedRemovedOutlier.png)
+
+
+* Median of Entries : 36
+* Mean of Entries : 71.85
+* Mode of Entries : 4
+* Standard Deviation of Entries : 95.83
+
+
+* Median of Exits : 21
+* Mean of Exits : 32.35
+* Mode of Exits : 9
+* Standard Deviation of Exits : 32.81
 
 
 ## (Part 3.2) -  Plotting 2D Random Number Generators **(15%)**
