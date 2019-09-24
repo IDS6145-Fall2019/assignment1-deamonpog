@@ -47,7 +47,7 @@ The manager of the tunnel escalater system is allowed to make decisions to contr
 ![An Example: A Picture of Holborn Tube Station Escalator](design/images/800px-Holborn_Tube_Station_Escalator.jpg)
 
 ## (Part 1.1): Requirements (Experimental Design) **(10%)**
-The simulation will be run for a full factoral design of experiment by varying the number of escalators that are actively rotating and allowing walking lanes. Congestion values of the station area will be recorded.
+The simulation will be run for a full factoral design of experiment by varying the escaltor settings (i.e. design factors defined in the part 1.5 section below). The other independent variables will be held constant. Time spent by an agent in the station and the congestion values of the station area will be recorded as response varialbes.
 These data will be statistically analyzed for figuring out which parameters give least amount of congestion.
 
 ## (Part 1.2) Subway (My Problem) Model **(10%)**
