@@ -96,7 +96,7 @@ Following facctors are not under our study but they affect the outcomes.
 We are mainly interested on the following two response variables:
 
 1. Congestion levels at locations (path nodes, escalators, doors, elevators, platforms, waiting aras)
-2. Number of ticks spent by a person in the station
+2. Number of ticks spent by a person in the station (delay)
 
 The lower the values of both response variables are the better. Therefore this is a minimization problem. Since the values of congestion are area based the median and mean values of congetion will be used. Similarly the average number of ticks spent by a person in the station will be considered as the second response variable.
 Additionally, the distribution of number of ticks spent by a person in the system and distribution of congestion levels are importent to be analyzed.
@@ -104,8 +104,11 @@ Additionally, the distribution of number of ticks spent by a person in the syste
 The values for the design factors will be defined synthetically as required for running a full factorial experiment. The values of the held-constant factors will be obtained from the data described in the section part 3 below.
 
 A linear model will be used for analyzing the data for correlation between congestions since the independent variables are countable. Linear regression, correlation coefficients will be the statistical tools to use for this analysis.
-Scatter plots of congetion, timeseries of congestion, box plot of congestion will be preferable graphs to analyze the data visually.
 
+Scatter plots of congetion and delay, timeseries of congestion and delay ,and box plot of congestion and delay will be preferable graphs to analyze the data visually.
+Histograms will be used to show the distribution of congetion and delay.
+
+A possible inforgraphic will be to use a set of escalator with different informaiton at each step of the escalator steps. Each escalator could represent a diffferent variable or a factor.
 
 
 # Part 2: Creating a Model from Code
