@@ -32,7 +32,7 @@ Reduce congestion and delay in the system.
 5. Minimize the congestion in the subway.
 
 ## Probable Solution
-The manager of the tunnel escalater system is allowed to make decisions to control the rules of escalaters inorder to achive the above goal and objectives.
+The manager of the tunnel escalater system is allowed to make decisions to control the rules of escalaters inorder to achive the above goal and objectives. A model of the real station is created and simulated for veriety of scenarios. The scenarios could be generated either synthetically or by looking at available data (such as how many people come into the staiton at a given time of day). The model will be run through a series of experiments by changing escalator settings and data will be collected about the congestion levels and delays of people. Statistical tests on the gathered data will provide insight into which escalator settings are the best for the system at a given time of day.
 
 ## Limitations and Scope
 - The number of escalators is a fixed value for a given scenario.
@@ -52,13 +52,12 @@ These data will be statistically analyzed for figuring out which parameters give
 
 ## (Part 1.2) Subway (My Problem) Model **(10%)**
 
-(remove: add a high-level overview of your model, the part below should link to the model directory markdown files)
-(remove: Look at the [**Object Diagram**](model/object_diagram.md) for how to structure this part of Part 2 for each diagram. Only the Object diagram has the template, the rest are blank. )
+The station will be modeld uwing Agent Based Modeling techniques where people are agents. The escalater rules/settings are variables. The amount of people coming-in and going-out will be taken from data.
 
 * [**Object Diagram**](model/object_diagram.md) - provides the high level overview of components
 * [**Class Diagram**](model/class_diagram.md) - provides details of (what are you providing details of)
-* [**Behavior Diagram**](model/behavior_diagram.md) - provides details of (what are you providing details of)
-* [**Agent / User case** (if appropriate)](model/agent_usecase_diagram.md) - provides details of (what are you providing details of)
+* [**State Transition Diagram of a Person going toward City**](model/behavior_diagram.md) - provides details of the behavior of a person going to the city after dropping from the train.
+* [**State Transition Diagram of a Person going toward a Train**](model/agent_usecase_diagram.md) - provides details of behavior of a person going to catch a train after coming into the staiton from the city.
 
 ## (Part 1.3) Subway (My Problem) Simulation **(10%)**
 This will be an agent based simulation. Person will have two main tasks, going to train from the city and going to city from the train. One of these two will be the goal of the person. His behaviour could be either aggressive (wants to go as quickly as he can) or comfirt biasd (looks for less congested areas whenever he can and prefers slow and easy movement options). 
@@ -68,7 +67,7 @@ These outputs will help in optimizing the system by calibrating the model parame
 
 
 ## (Part 1.4) Subway City (My Problem) Model **(10%)**
-[**Code template**](code/README.md) - Starting coding framework for the (insert your exact problem here.)
+[**Code template**](code/README.md) - Starting coding framework for the Subway Tunnel Escalator Optimization System.
 You are expected to create the python files - the code should run without errors, create and object(s) for your system, but not provide function detail.
 
 
@@ -81,17 +80,37 @@ You are expected to create the python files - the code should run without errors
 * What ways will you visualize your data - charts, and graphs you will create?
 * What clever way will you visualize your output with a useful infographic?
 
-Independent variables: 
-1. Number of rotating escalators
-2. Number of lanes allowed to walk
+#### Independent variables (factors) :
 
-Dependent variables:
-1. Congestion levels at locations (path nodes)
+**Design Factors:**
+Following factors are the ones which we aim to investigate
+
+1. Number of rotating escalators directed towards Trains
+1. Total Number of lanes allowed to walk on rotating escalators directed towards Trains
+1. Number of rotating escalators directed towards City
+1. Total Number of lanes allowed to walk on rotating escalators directed towards City
+
+**Held-Constant Factors:** 
+Following facctors are not under our study but they affect the outcomes.
+
+1. Rate of people coming to the station from the city at a given time of day
+1. Rate of people coming to the station from trains at a given time of day
+1. Rate of people leaving the station from trains at a given time of day
+
+
+#### Dependent variables:
+We are mainly interested on the following two response variables:
+
+1. Congestion levels at locations (path nodes, escalators, doors, elevators, platforms, waiting aras)
 2. Number of ticks spent by a person in the station
 
+The lower the values of both response variables are the better. Therefore this is a minimization problem. Since the values of congestion are area based the median and mean values of congetion will be used. Similarly the average number of ticks spent by a person in the station will be considered as the second response variable.
+Additionally, the distribution of number of ticks spent by a person in the system and distribution of congestion levels are importent to be analyzed.
+
 The values for the independent variables will be defined synthetically as required for running a full factorial experiment.
+
 A linear model will be used for analyzing the data for correlation between congestions since the independent variables are countable. Linear regression, correlation coefficients will be the statistical tools to use for this analysis.
-Scatter plots of congetion, timeseries of congestion, box plot of congestion will be preferable graphs to analyze the data visually. 
+Scatter plots of congetion, timeseries of congestion, box plot of congestion will be preferable graphs to analyze the data visually.
 
 
 
