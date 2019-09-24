@@ -118,21 +118,32 @@ Data Source: https://data.ny.gov/Transportation/Turnstile-Usage-Data-2018/bjcb-y
 
 This data is provided by the data.gov website for public use. The data gives information about how many people entered or exited through the turnstile in 2018, in the New York metropolitan area. The data contains 10<sup>7</sup> rows of data where each row shows the cumulative number of Exits and Entries through the turnstiles at a given date-time at a given line of a given station. This data will provide insight to how many people are coming in and leaving a given station. With it a general rate of entries and exits could be determined for a given time of a weekday. This will be considered when optimizing the congestion control with the model that I am designing. The values directly could be applied to the model as input to see how well it would handle the incoming crowds and how the congestion levels of certain areas in the station are affected.
 
-By analysing the data, I picked the specific station JAMAICA 179 ST and the device SCP:00-00-06 in that station for the data analysis since it has enough data for pre-analysis for the model development. This file is located at : https://github.com/IDS6145-Fall2019/assignment1-deamonpog/tree/master/data
+By analysing the data, I picked the specific station JAMAICA 179 ST and the device SCP:00-00-06 in that station for the data analysis since it has enough data for the model development. This file is located at : https://github.com/IDS6145-Fall2019/assignment1-deamonpog/tree/master/data/sorted.csv
 
 The basic statistics of Entries and Exits values are given below:
 
-Median of Entries : 67556.0
-Mean of Entries : 64276.27
-Standard Deviation of Entries : 33271.63
+* Median of Entries : 67556.0
+* Mean of Entries : 64276.27
+* Standard Deviation of Entries : 33271.63
 
-Median of Exits : 33672.0
-Mean of Exits : 31937.00
-Standard Deviation of Exits : 15782.89
+
+* Median of Exits : 33672.0
+* Mean of Exits : 31937.00
+* Standard Deviation of Exits : 15782.89
 
 The high std dev values are expected since these are cumulative values.
 
-![Image of 2d template City](images/entandext.png)
+The following figure shows a timeseries of the raw cumulative Entries and Exits values. The drop on the middle of the graph around 5th month of 2018 is due to a machine reset. Additionally the data shows some irregularities on the 5th month as seen in the tip of the peak area of the graph. Therefore the data was trimmed to remove the period of time after 5th of May, 2018 (after looking at the data values).
+![entandext](images/entandext.png)
+
+The plot of raw entries and exits after the trimming is shown below. This clearly shows a monotonically increasing cumulative function. Therefore this data is now considered valid.
+![RawEEDataPickedAll](images/RawEEDataPickedAll.png)
+
+The data was processed to convert the cumulative values into actual values. This gives the actual number of entries and exits. The following grpah shows the actual number of entries and exits over time. There is a peak value of both entries and exits on the 17th of March 2018 at midnight. This must be due to some special event that occured on that day. All other datapoints seem to show a pattern. Therefore, this datapoint is considered an outlier and was modified to a value of 0 inorder to observe the pattern.
+![EEDataPickedAll](images/EEDataPickedAll.png)
+
+The following shows the same graph with the outlier peak removed. The pattern of peaks follows the weekdays. This will be further analyzed statistically for finding a general pattern for a weekday.
+![EEDataPickedRemovedOutlier](images/EEDataPickedRemovedOutlier.png)
 
 
 ## (Part 3.2) -  Plotting 2D Random Number Generators **(15%)**
