@@ -101,7 +101,7 @@ We are mainly interested on the following two response variables:
 The lower the values of both response variables are the better. Therefore this is a minimization problem. Since the values of congestion are area based the median and mean values of congetion will be used. Similarly the average number of ticks spent by a person in the station will be considered as the second response variable.
 Additionally, the distribution of number of ticks spent by a person in the system and distribution of congestion levels are importent to be analyzed.
 
-The values for the independent variables will be defined synthetically as required for running a full factorial experiment.
+The values for the design factors will be defined synthetically as required for running a full factorial experiment. The values of the held-constant factors will be obtained from the data described in the section part 3 below.
 
 A linear model will be used for analyzing the data for correlation between congestions since the independent variables are countable. Linear regression, correlation coefficients will be the statistical tools to use for this analysis.
 Scatter plots of congetion, timeseries of congestion, box plot of congestion will be preferable graphs to analyze the data visually.
