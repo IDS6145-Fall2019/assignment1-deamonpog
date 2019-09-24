@@ -74,12 +74,6 @@ You are expected to create the python files - the code should run without errors
 
 ## (Part 1.5) Specifying the Inputs to a System **(10%)**
 
-(remove the below points once ideas are satisfied)
-* What kind of statistics are important to capture this input data
-* How do you plan to analyze the output of your model?
-* What ways will you visualize your data - charts, and graphs you will create?
-* What clever way will you visualize your output with a useful infographic?
-
 #### Independent variables (factors) :
 
 **Design Factors:**
