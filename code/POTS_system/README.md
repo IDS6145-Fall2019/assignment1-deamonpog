@@ -9,4 +9,3 @@ Weirdly the `Grow` function sets the amount of `sun` received to 0 at the grow f
 
 ### Class Diagram of POTS System
 ![POTS system](../../images/POTS%20System%20Class%20Diagram.png)
-more decription
