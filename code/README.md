@@ -1,6 +1,6 @@
 ## Smart City (My Problem) Model
 
-Starting coding framework for the **Subway Tunnel Optimization System** is [located here.](code/SubwayOpt)
+Starting coding framework for the **Subway Tunnel Optimization System** is [located here.](https://github.com/IDS6145-Fall2019/assignment1-deamonpog/tree/master/code/SubwayOpt)
 
-The [main.py file](code/SubwayOpt/main.py) is the main script which has to be run.
+The [main.py file](https://github.com/IDS6145-Fall2019/assignment1-deamonpog/blob/master/code/SubwayOpt/main.py) is the main script which has to be run.
 Each class in the [class diagram](image/MySubwaySystemClassDiag.png) are implemented in a separate python sourcecode file.
